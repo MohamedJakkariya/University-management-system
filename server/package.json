@@ -1,0 +1,65 @@
+{
+  "_from": "create-nose-server",
+  "_id": "create-nose-server@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-SnHspp25G3txPnXt9lTPHXZfJE6wK/v7L7S17Llk+7kxSulZ+SbxjASPWHXvARTKvnaXb6dsa6zn5ddGqzAZAw==",
+  "_location": "/create-nose-server",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "create-nose-server",
+    "name": "create-nose-server",
+    "escapedName": "create-nose-server",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/create-nose-server/-/create-nose-server-1.0.1.tgz",
+  "_shasum": "7b056ed44a263aa709d9a288b1b041cfb9783caf",
+  "_spec": "create-nose-server",
+  "_where": "C:\\Users\\mdjac\\OneDrive\\Desktop\\university-management-system\\server",
+  "author": {
+    "name": "Mohamed Jakkariya"
+  },
+  "bugs": {
+    "url": "https://github.com/MohamedJakkariya/create-nose-server/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "debug": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "deprecated": false,
+  "description": "This package under development if you want to use just try for alpha-1.0.1v testing.",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  },
+  "homepage": "https://github.com/MohamedJakkariya/create-nose-server#readme",
+  "keywords": [
+    "Nodejs",
+    "SQL",
+    "Express",
+    "Server",
+    "NOSE template"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "create-nose-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamedJakkariya/create-nose-server.git"
+  },
+  "scripts": {
+    "devstart": "nodemon ./config/www",
+    "start": "node ./config/www"
+  },
+  "version": "1.0.1"
+}
