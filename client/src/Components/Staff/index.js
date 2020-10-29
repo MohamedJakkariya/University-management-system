@@ -1,5 +1,5 @@
 /** @format */
 
-import Dashboard from './dashboard';
+import Dashboard from './Dashboard';
 
 export { Dashboard };

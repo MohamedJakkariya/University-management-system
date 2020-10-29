@@ -2,8 +2,8 @@
 
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import Login from './auth/login';
-import { Dashboard } from './staff';
+import Login from './Components/Auth/login';
+import { Dashboard } from './Components/Staff';
 
 function App() {
 	return (
