@@ -34,8 +34,8 @@ function createData(name, calories, fat, carbs, protein, price) {
 		protein,
 		price,
 		history: [
-			{ date: '2020-01-05', customerId: '810018104048', amount: 80 },
-			{ date: '2020-01-02', customerId: '810010104048', amount: 90 },
+			{ date: '2020-01-05', customerId: 'Internal 1', amount: 80 },
+			{ date: '2020-01-02', customerId: 'Internal 2', amount: 90 },
 		],
 	};
 }

@@ -18,7 +18,7 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import EmailIcon from '@material-ui/icons/Email';
 import TodayIcon from '@material-ui/icons/Today';
 import Button from '@material-ui/core/Button';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import StudentData from './StudentData';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Box from '@material-ui/core/Box';
