@@ -13,7 +13,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
-// import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import CallToActionIcon from '@material-ui/icons/CallToAction';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import EmailIcon from '@material-ui/icons/Email';
@@ -21,6 +20,8 @@ import TodayIcon from '@material-ui/icons/Today';
 import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import StudentData from './StudentData';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Box from '@material-ui/core/Box';
 
 const drawerWidth = 270;
 
@@ -29,8 +30,12 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 	},
 	appBar: {
-		flexGrow: 1,
 		zIndex: theme.zIndex.drawer + 1,
+	},
+	toolBar: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		alignItems: 'center',
 	},
 	drawer: {
 		width: drawerWidth,
@@ -48,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	link: {
 		textDecoration: 'none',
-		color: 'white',
+		color: 'black',
 	},
 }));
 
@@ -59,11 +64,16 @@ export default function Dashboard() {
 		<div className={classes.root}>
 			<CssBaseline />
 			<AppBar position='fixed' className={classes.appBar}>
-				<Toolbar>
+				<Toolbar className={classes.toolBar}>
 					<Typography edge='start' variant='h6' noWrap>
 						Dashboard
 					</Typography>
-					<Button color='inherit'>Login</Button>
+					<Box>
+						<Button color='inherit'>Welcome Indu</Button>
+						<Button color='inherit'>
+							<ExitToAppIcon />
+						</Button>
+					</Box>
 				</Toolbar>
 			</AppBar>
 			<Drawer
@@ -76,14 +86,6 @@ export default function Dashboard() {
 				<div className={classes.drawerContainer}>
 					<Router>
 						<List>
-							{/* <Link  className={classes.link}>
-								<ListItem button>
-									<ListItemIcon>
-										<SupervisedUserCircleIcon />
-									</ListItemIcon>
-									<ListItemText primary='Faculties' />
-								</ListItem>
-							</Link> */}
 							<Link className={classes.link}>
 								<ListItem button>
 									<ListItemIcon>

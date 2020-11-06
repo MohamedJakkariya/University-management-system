@@ -122,11 +122,11 @@ Row.propTypes = {
 };
 
 const rows = [
-	createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-	createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-	createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
-	createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-	createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+	createData('Mohamed Jakkariya', 4048, 7.0, 24, 4),
+	createData('Krishna moorthy', 4042, 9.0, 27, 4),
+	createData('Bala murugan', 4015, 7.5, 24, 6),
+	createData('Badri', 4005, 7.7, 27, 4),
+	createData('Asarudeen', 4050, 8.0, 29, 3),
 ];
 
 export default function StudentData() {
@@ -136,11 +136,11 @@ export default function StudentData() {
 				<TableHead>
 					<TableRow>
 						<TableCell />
-						<TableCell>Dessert (100g serving)</TableCell>
-						<TableCell align='right'>Calories</TableCell>
-						<TableCell align='right'>Fat&nbsp;(g)</TableCell>
-						<TableCell align='right'>Carbs&nbsp;(g)</TableCell>
-						<TableCell align='right'>Protein&nbsp;(g)</TableCell>
+						<TableCell>Name</TableCell>
+						<TableCell align='right'>Roll no</TableCell>
+						<TableCell align='right'>Avg grade</TableCell>
+						<TableCell align='right'>Present(35/35)</TableCell>
+						<TableCell align='right'>Absent</TableCell>
 					</TableRow>
 				</TableHead>
 				<TableBody>
