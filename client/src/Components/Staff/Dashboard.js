@@ -13,12 +13,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
-import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+// import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import CallToActionIcon from '@material-ui/icons/CallToAction';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import EmailIcon from '@material-ui/icons/Email';
 import TodayIcon from '@material-ui/icons/Today';
 import Button from '@material-ui/core/Button';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import StudentData from './StudentData';
 
 const drawerWidth = 270;
 
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 	},
 	appBar: {
-		flexGrow : 1,
+		flexGrow: 1,
 		zIndex: theme.zIndex.drawer + 1,
 	},
 	drawer: {
@@ -44,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		padding: theme.spacing(3),
 	},
+	link: {
+		textDecoration: 'none',
+		color: 'white',
+	},
 }));
 
 export default function Dashboard() {
@@ -54,10 +60,10 @@ export default function Dashboard() {
 			<CssBaseline />
 			<AppBar position='fixed' className={classes.appBar}>
 				<Toolbar>
-					<Typography edge="start" variant='h6' noWrap>
+					<Typography edge='start' variant='h6' noWrap>
 						Dashboard
 					</Typography>
-					<Button  color="inherit">Login</Button>
+					<Button color='inherit'>Login</Button>
 				</Toolbar>
 			</AppBar>
 			<Drawer
@@ -68,76 +74,66 @@ export default function Dashboard() {
 				}}>
 				<Toolbar />
 				<div className={classes.drawerContainer}>
-					<List>
-						<ListItem button>
-							<ListItemIcon>
-								<SupervisedUserCircleIcon />
-							</ListItemIcon>
-							<ListItemText primary='Faculties' />
-						</ListItem>
-						<ListItem button>
-							<ListItemIcon>
-								<AccountTreeIcon />
-							</ListItemIcon>
-							<ListItemText primary='Departments' />
-						</ListItem>
-						<ListItem button>
-							<ListItemIcon>
-								<PeopleAltIcon />
-							</ListItemIcon>
-							<ListItemText primary='Students' />
-						</ListItem>
-						<ListItem button>
-							<ListItemIcon>
-								<CallToActionIcon />
-							</ListItemIcon>
-							<ListItemText primary='Requests' />
-						</ListItem>
-					</List>
-					<Divider />
-					<List>
-						{['Go Mail', 'Calender'].map((text, index) => (
-							<ListItem button key={text}>
-								<ListItemIcon>
-									{index % 2 === 0 ? <EmailIcon /> : <TodayIcon />}
-								</ListItemIcon>
-								<ListItemText primary={text} />
-							</ListItem>
-						))}
-					</List>
+					<Router>
+						<List>
+							{/* <Link  className={classes.link}>
+								<ListItem button>
+									<ListItemIcon>
+										<SupervisedUserCircleIcon />
+									</ListItemIcon>
+									<ListItemText primary='Faculties' />
+								</ListItem>
+							</Link> */}
+							<Link className={classes.link}>
+								<ListItem button>
+									<ListItemIcon>
+										<AccountTreeIcon />
+									</ListItemIcon>
+									<ListItemText primary='Departments' />
+								</ListItem>
+							</Link>
+							<Link className={classes.link} to='/staff/dashboard/students'>
+								<ListItem button>
+									<ListItemIcon>
+										<PeopleAltIcon />
+									</ListItemIcon>
+									<ListItemText primary='Students' />
+								</ListItem>
+							</Link>
+							<Link className={classes.link}>
+								<ListItem button>
+									<ListItemIcon>
+										<CallToActionIcon />
+									</ListItemIcon>
+									<ListItemText primary='Requests' />
+								</ListItem>
+							</Link>
+						</List>
+						<Divider />
+						<List>
+							<Link className={classes.link}>
+								<ListItem button>
+									<ListItemIcon>
+										<EmailIcon />
+									</ListItemIcon>
+									<ListItemText primary='Go Mail' />
+								</ListItem>
+							</Link>
+							<Link className={classes.link}>
+								<ListItem button>
+									<ListItemIcon>
+										<TodayIcon />
+									</ListItemIcon>
+									<ListItemText primary='Calender' />
+								</ListItem>
+							</Link>
+						</List>
+					</Router>
 				</div>
 			</Drawer>
 			<main className={classes.content}>
 				<Toolbar />
-				<Typography paragraph>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-					dolor purus non enim praesent elementum facilisis leo vel. Risus at
-					ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-					quisque non tellus. Convallis convallis tellus id interdum velit
-					laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-					adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-					integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-					eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-					quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-					vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-					lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-					faucibus et molestie ac.
-				</Typography>
-				<Typography paragraph>
-					Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-					ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-					elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-					sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-					mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-					risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-					purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-					tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-					morbi tristique senectus et. Adipiscing elit duis tristique
-					sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-					eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-					posuere sollicitudin aliquam ultrices sagittis orci a.
-				</Typography>
+				<Route path='/staff/dashboard/students' component={StudentData} />
 			</main>
 		</div>
 	);
