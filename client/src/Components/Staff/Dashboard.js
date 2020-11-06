@@ -70,9 +70,11 @@ export default function Dashboard() {
 					</Typography>
 					<Box>
 						<Button color='inherit'>Welcome Indu</Button>
-						<Button color='inherit'>
-							<ExitToAppIcon />
-						</Button>
+						<Link to='/'>
+							<Button color='inherit'>
+								<ExitToAppIcon />
+							</Button>
+						</Link>
 					</Box>
 				</Toolbar>
 			</AppBar>
@@ -135,7 +137,7 @@ export default function Dashboard() {
 			</Drawer>
 			<main className={classes.content}>
 				<Toolbar />
-				<Route path='/staff/dashboard/students' component={StudentData} />
+				<StudentData />
 			</main>
 		</div>
 	);
